@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.custom-primary-btn {
+  .n-button--primary-type {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border: none;
+  }
+
+  .n-button--primary-type:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  }
+}
+
+/* 在全局样式文件中添加 */
+.n-date-panel-actions .n-button--primary-type {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+.n-date-panel-actions .n-button--primary-type .n-button__content {
+  color: #ffffff !important;
+}
+
+// 日期选择器样式
+:deep(.n-date-picker) {
+  .n-input {
+    &:hover {
+      border-color: #a78bfa;
+      color: #4F46E5 !important;
+    }
+
+    &.n-input--focus {
+      border-color: #8b5cf6;
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+  }
+}
+
+.n-time-picker-actions__confirm {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+.n-card__content {
+  padding: 0 !important;
+}
+
+.custom-card-content {
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.custom-modal-content {
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.custom-form-modal-content {
+  padding: 16px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+
+    &:hover {
+      background: #9ca3af;
+    }
+  }
+}
+
+.custom-form-content {
+  padding: 0 8px 0 0;
+}
+
+.n-data-table-filter-menu {
+  .n-data-table-filter-menu__action {
+    .n-button {
+      // 确认按钮样式
+      &.n-button--primary-type {
+        background: #3b82f6 !important;
+        opacity: 1 !important;
+        color: white !important;
+
+        &:hover:not(:disabled) {
+          background: #2563eb !important;
+          box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+        }
+
+        &:active {
+          background: #1d4ed8 !important;
+        }
+      }
+    }
+  }
+}
+
+
+.page-content {
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+
+
+.no-feedback {
+  .n-form-item-feedback-wrapper {
+    min-height: 0;
+  }
+}

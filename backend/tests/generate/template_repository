@@ -1,0 +1,29 @@
+from sqlalchemy.orm import Session
+
+from basic.repository.base_repository import BaseRepository
+from [MODULE_NAME].entity.[TABLE_NAME_LOWER] import [TABLE_NAME]Entity
+from [MODULE_NAME].model.[TABLE_NAME_LOWER]_model import [TABLE_NAME]Model
+
+
+class [TABLE_NAME]Repository(BaseRepository):
+    def __init__(self, session: Session):
+        super().__init__(session)
+
+    def insert(self, model: [TABLE_NAME]Model):
+        return self.add(
+            model=model,
+            entity=[TABLE_NAME]Entity
+        )
+
+    def update(self, model: [TABLE_NAME]Model):
+        return self.update_entity(
+            entity=[TABLE_NAME]Entity,
+            entity_id=model.id,
+            model=model
+        )
+
+    def delete_by_id(self, data_id: str):
+        return self.delete(
+            entity=[TABLE_NAME]Entity,
+            entity_id=data_id
+        )

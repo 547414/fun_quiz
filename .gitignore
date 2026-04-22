@@ -1,0 +1,13 @@
+**/.idea/
+**/.pytest_cache/
+**/__pycache__/
+**/logs/
+**/temp/
+**/node_modules/
+**/.claude/
+**/references
+**/.env.development
+**/.env.production
+**/app_development_config.toml
+**/app_production_config.toml
+**/dist/

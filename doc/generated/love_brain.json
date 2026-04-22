@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "name": "你的恋爱脑程度测试",
+    "code": "love_brain",
+    "cover_url": "",
+    "quiz_type": "score",
+    "share_title": "测测你的恋爱脑程度？",
+    "share_desc": "15道题揭开你为爱上头的真实程度",
+    "fallback_outcome_code": "MILD_BRAIN",
+    "result_config": {
+      "bg_color": "#fff0f5",
+      "show_radar": false,
+      "show_tags": true
+    }
+  },
+  "algo_config": {
+    "total_min": 0,
+    "total_max": 150
+  },
+  "special_rules": [],
+  "questions": [
+    {
+      "seq": 1,
+      "content": "暗恋一个人的时候，你会？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "默默喜欢，不表现，偶尔祝他平安就好", "score": 0 },
+        { "key": "B", "label": "偶尔在他朋友圈下面点个赞，当做暗号", "score": 5 },
+        { "key": "C", "label": "把他所有的内容看了一遍，顺带研究了他的朋友关系", "score": 10 }
+      ]
+    },
+    {
+      "seq": 2,
+      "content": "分手后你能多快从一段感情里走出来？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "一个月内，感情就那样，继续过日子", "score": 0 },
+        { "key": "B", "label": "需要几个月，难受但能吃饭", "score": 5 },
+        { "key": "C", "label": "什么叫走出来，我还没走出来", "score": 10 }
+      ]
+    },
+    {
+      "seq": 3,
+      "content": "对方两小时没回你消息，你会？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "可能在忙，继续做自己的事，没什么", "score": 0 },
+        { "key": "B", "label": "有点介意，但忍住了没催", "score": 5 },
+        { "key": "C", "label": "发了三条消息、翻了三遍朋友圈、查了他最后在线时间", "score": 10 }
+      ]
+    },
+    {
+      "seq": 4,
+      "content": "你愿意为了喜欢的人改变什么？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "基本不改，爱我就要接受我", "score": 0 },
+        { "key": "B", "label": "稍微调整一些小习惯", "score": 5 },
+        { "key": "C", "label": "从发型到爱好到作息，能改的全改了", "score": 10 }
+      ]
+    },
+    {
+      "seq": 5,
+      "content": "约好了见面，对方临时放鸽子，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "「没事」，真的没事，自己去玩了", "score": 0 },
+        { "key": "B", "label": "有点失望，发了一条「哦好吧」", "score": 5 },
+        { "key": "C", "label": "心情崩了整天，然后发了一条「没事」", "score": 10 }
+      ]
+    },
+    {
+      "seq": 6,
+      "content": "你会主动查对方的社交媒体吗？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "不会，有点侵犯隐私", "score": 0 },
+        { "key": "B", "label": "偶尔看看，不深查", "score": 5 },
+        { "key": "C", "label": "他发的所有内容我如数家珍，包括2016年的一条转发", "score": 10 }
+      ]
+    },
+    {
+      "seq": 7,
+      "content": "你觉得「分开一段时间冷静一下」意味着什么？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "就是字面意思，可以谈的", "score": 0 },
+        { "key": "B", "label": "有点担心，但接受", "score": 5 },
+        { "key": "C", "label": "等于分手，当场崩溃", "score": 10 }
+      ]
+    },
+    {
+      "seq": 8,
+      "content": "喜欢的人和别人走得近，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "朋友很正常，我信任他", "score": 0 },
+        { "key": "B", "label": "有点在意，但压住了", "score": 5 },
+        { "key": "C", "label": "已经在心里建立了一份「威胁人员档案」", "score": 10 }
+      ]
+    },
+    {
+      "seq": 9,
+      "content": "你愿意跨多远的距离去见对方？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "两小时以内合理，超过太累了", "score": 0 },
+        { "key": "B", "label": "一个飞机航班的距离可以接受", "score": 5 },
+        { "key": "C", "label": "地球另一边都能去，机票已买好", "score": 10 }
+      ]
+    },
+    {
+      "seq": 10,
+      "content": "当你喜欢一个人，你发消息的频率会？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "跟平时差不多，我不喜欢轰炸人", "score": 0 },
+        { "key": "B", "label": "稍微多一点，但不过分", "score": 5 },
+        { "key": "C", "label": "每隔一小时就想发点什么，看到啥都觉得「要给他看」", "score": 10 }
+      ]
+    },
+    {
+      "seq": 11,
+      "content": "失恋之后，你第一件事是？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "删掉所有联系方式，彻底断联，干净", "score": 0 },
+        { "key": "B", "label": "留着联系方式，但不会主动联系", "score": 5 },
+        { "key": "C", "label": "看了三遍聊天记录，第四遍在路上", "score": 10 }
+      ]
+    },
+    {
+      "seq": 12,
+      "content": "你会为喜欢的人学他喜欢的东西吗？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "太麻烦了，喜欢就喜欢，不需要强行接轨", "score": 0 },
+        { "key": "B", "label": "比较简单的会学学", "score": 5 },
+        { "key": "C", "label": "为了有共同话题，他喜欢的东西我都学了", "score": 10 }
+      ]
+    },
+    {
+      "seq": 13,
+      "content": "对方说「你是我最好的朋友」，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "接受，友情也很好", "score": 0 },
+        { "key": "B", "label": "有点难受，但撑住了，继续正常交往", "score": 5 },
+        { "key": "C", "label": "现场心脏骤停，但还是笑着说「嗯嗯」", "score": 10 }
+      ]
+    },
+    {
+      "seq": 14,
+      "content": "你有没有计划过「如果他喜欢我，我们以后的生活」？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "没有，想太远了，不现实", "score": 0 },
+        { "key": "B", "label": "偶尔幻想过，但不详细", "score": 5 },
+        { "key": "C", "label": "不只幻想过，连住哪个城市、养几只猫都想好了", "score": 10 }
+      ]
+    },
+    {
+      "seq": 15,
+      "content": "你有没有做过「发疯文学」类的行为？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "没有，成年人不做这种事", "score": 0 },
+        { "key": "B", "label": "发过，但立刻删了，当它没发生过", "score": 5 },
+        { "key": "C", "label": "不止发过，还截图存了，算是黑历史收藏", "score": 10 }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "code": "ROBOT",
+      "name": "情感免疫机器人",
+      "avatar_url": "",
+      "summary": "你的心脏是花岗岩做的，喜欢上一个人之前要先通过三轮审核",
+      "detail": "你暗恋一个人最多三天就能自愈，分手之后能在一周内正常吃饭，对「想念」这种情绪基本免疫。朋友羡慕你「理性」，暗恋过你的人说「跟你表白像在投简历」。\n你不是冷漠，你只是对感情有一种近乎科学的抵抗力。你把所有「喜欢」都过滤了一遍，能通过的很少。这没什么不好，只是偶尔，你会在电影散场的时候，短暂地觉得有人陪着走出来好像也不错。\n建议你下次对一个人有感觉的时候，不要立刻开始「理性分析」，先允许自己「无意义地想」三分钟。三分钟后再理性也不迟。",
+      "tags": ["情感免疫", "分手后正常吃饭", "理性过头"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "score_min": 0, "score_max": 29 }
+    },
+    {
+      "code": "RATIONAL",
+      "name": "清醒恋人",
+      "avatar_url": "",
+      "summary": "你谈过恋爱，而且谈得挺清醒，但有时候清醒到错过了最好的时机",
+      "detail": "你不会为了一个人丢掉自己，分手了难受但能吃饭，喜欢一个人会有表现但不失去边界。这听起来是优点，事实上也是。\n但你有时候过于「拿捏」，在「主动一点」和「保持分寸」之间反复横跳，结果最好的时机就在你犹豫的那三天里悄悄过去了。你叫这个「不想丢面子」，其实是「不想受伤」。\n建议你下次喜欢一个人，把准备好的「理性措辞」先放一边，发一条「最近在干嘛」，就这样，看看会发生什么。",
+      "tags": ["有边界感", "主动但克制", "错过了也若无其事"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "score_min": 30, "score_max": 59 }
+    },
+    {
+      "code": "MILD_BRAIN",
+      "name": "轻度恋爱脑",
+      "avatar_url": "",
+      "summary": "你有一点恋爱脑，但还没到无可救药的地步",
+      "detail": "你会在对方没回消息的时候刷两遍朋友圈，然后假装自己没在等。你有自我意识，知道自己有时候「想多了」，但知道归知道，还是继续想。\n这不是病，这叫「正常人的正常感情」。喜欢一个人本来就应该有点上头，问题是上头的程度。你基本还在可控范围内，只是有时候那条线你会越过去一点点，然后拉回来。\n建议你以后每隔几天问问自己「我上周为他做了几件超出正常范围的事」，数字超过3就暂停一下，深呼吸，做自己。",
+      "tags": ["有点上头", "知道但停不下来", "还没失控"],
+      "is_fallback": true,
+      "is_special": false,
+      "match_config": { "score_min": 60, "score_max": 89 }
+    },
+    {
+      "code": "HEAVY_BRAIN",
+      "name": "重度恋爱脑",
+      "avatar_url": "",
+      "summary": "你就是那个两小时没回消息就翻朋友圈查最后在线时间的人",
+      "detail": "你知道这没必要，你也知道这很累，但你停不下来，因为停下来就意味着「在乎得不够」，而这对你来说是更难以接受的事。\n你的感情热情度极高，问题是这种热情经常烧到自己身上。你不是不好，你只是把「付出」和「爱」画了等号，然后开始无限加大付出量，直到对方累了，或者你自己先累了。\n建议你背下这句话，每天早上说一遍：「我喜欢他，也喜欢我自己。」只有这两件事同时成立，这段感情才能撑得住。",
+      "tags": ["催了又催", "为爱失眠", "付出等于爱"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "score_min": 90, "score_max": 119 }
+    },
+    {
+      "code": "TERMINAL_BRAIN",
+      "name": "恋爱脑晚期",
+      "avatar_url": "",
+      "summary": "你已经不是恋爱脑了，你是恋爱全身",
+      "detail": "你可以为了喜欢的人改变一切，然后等他说「我们分开吧」的时候，发现自己已经找不到「没谈恋爱时候的自己」了。你不是没有自我，你只是把自我暂时放进了感情的储藏室，然后忘记了取号。\n你的爱是真实的，是浓烈的，是很多人一辈子都给不出来的那种。问题不在于你爱的方式，在于你爱的时候只有你一个人在全力运转。\n建议你现在立刻做一件「和感情完全无关」的事，任何事，喜欢的食物、想看的书、想去的地方。你的人生在等你回来，它哪儿都没去。",
+      "tags": ["改变一切为了爱", "自我放进储藏室", "浓烈但危险"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "score_min": 120, "score_max": 150 }
+    }
+  ]
+}

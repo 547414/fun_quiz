@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "name": "摸鱼段位鉴定",
+    "code": "fish_master_rating",
+    "quiz_type": "score",
+    "share_title": "摸鱼段位鉴定｜你是第几段打工人",
+    "share_desc": "18 道题把你上班时的真实状态当场抓包，精准到隔间",
+    "fallback_outcome_code": "STEADY_PLAYER",
+    "cover_prompt": {
+      "prompt": "一群 MBTI 人格形象的打工人站成摸鱼段位阶梯群像：最低阶人机埋头敲键盘眼神发光、青铜偷偷摸手机满头汗、中段一手奶茶一手键盘微笑、王者翘二郎腿胸前挂「效率之星」、宗师闭眼打坐漂浮头顶光环，旁边小厕所隔间探出一双颤脚写着「使用中」，中央大字「摸鱼段位鉴定」，MBTI 插画风，扁平矢量治愈卡通，chibi Q 版 2.5 头身，圆润线条，马卡龙粉纯色大色块背景，细黑描边",
+      "style": "meme"
+    },
+    "result_config": {
+      "bg_color": "#eef6ff",
+      "show_radar": false,
+      "show_tags": true
+    }
+  },
+  "algo_config": {
+    "total_min": 0,
+    "total_max": 85
+  },
+  "special_rules": [
+    {
+      "condition_type": "option_selected",
+      "question_seq": 18,
+      "option_key": "C",
+      "trigger_outcome_code": "TOILET_WRITER"
+    }
+  ],
+  "questions": [
+    {
+      "seq": 1,
+      "content": "老板从你工位后方路过，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "立刻切回工作界面假装敲代码",       "score": 0 },
+        { "key": "B", "label": "缓慢切过去但神态自然",             "score": 3 },
+        { "key": "C", "label": "眼皮都不抬，反正他也看不懂",       "score": 5 }
+      ]
+    },
+    {
+      "seq": 2,
+      "content": "工作日下午 3 点，你在做什么？",
+      "is_hidden": false,
+      "image_prompt": {
+        "prompt": "一位 MBTI 插画风的打工人工位上左手鼠标右手摸手机桌上摊着零食和奶茶眼神游离，电脑屏一半是 PPT 一半是小红书，头顶气泡「下午三点是最难熬的」，MBTI 人格插画风，chibi Q 版 2.5 头身，圆润线条，奶油黄纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "options": [
+        { "key": "A", "label": "埋头写方案，DDL 不等人",                       "score": 0 },
+        { "key": "B", "label": "写一半起来接个水，顺手刷 5 分钟手机",           "score": 3 },
+        { "key": "C", "label": "工位藏零食+剧集+小红书三开战术",                "score": 5 }
+      ]
+    },
+    {
+      "seq": 3,
+      "content": "开全员大会的时候，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "认真听讲并做满两页笔记",                       "score": 0 },
+        { "key": "B", "label": "听关键信息，其他时间 emo",                      "score": 3 },
+        { "key": "C", "label": "摄像头糊一张图就去沙发躺平",                   "score": 5 }
+      ]
+    },
+    {
+      "seq": 4,
+      "content": "同事小群里开始吐槽老板，你会？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "假装没看见，不参与不讨论",                     "score": 0 },
+        { "key": "B", "label": "冒个头发个狗头就闪",                           "score": 3 },
+        { "key": "C", "label": "当场开麦带头吐槽并补图十张",                   "score": 5 }
+      ]
+    },
+    {
+      "seq": 5,
+      "content": "紧急活派到你头上，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "立刻放下手上事情开工",                         "score": 0 },
+        { "key": "B", "label": "嘴上应「好的」，先把早上那件没完成的干完",       "score": 3 },
+        { "key": "C", "label": "心里盘算能不能甩给隔壁组",                     "score": 5 }
+      ]
+    },
+    {
+      "seq": 6,
+      "content": "你每天真正摸鱼的时间是？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "不超过 15 分钟",                                "score": 0 },
+        { "key": "B", "label": "大概 1 到 2 小时",                              "score": 3 },
+        { "key": "C", "label": "除了上厕所以外全部时间",                       "score": 5 }
+      ]
+    },
+    {
+      "seq": 7,
+      "content": "看到系统提示「领导进入腾讯会议」，你？",
+      "is_hidden": false,
+      "image_prompt": {
+        "prompt": "一位 MBTI 人格形象的打工人电脑屏幕弹出「领导进入会议」红字，他惊得半空弹起双手举在耳机旁，头顶气泡「是真的来了」，MBTI 插画风，chibi Q 版 2.5 头身，圆润线条，马卡龙粉纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "options": [
+        { "key": "A", "label": "立刻坐直打开摄像头准备发言",                   "score": 0 },
+        { "key": "B", "label": "一边摸鱼一边挂会听响",                         "score": 3 },
+        { "key": "C", "label": "摄像头一关去阳台躺着听",                       "score": 5 }
+      ]
+    },
+    {
+      "seq": 8,
+      "content": "周报 / 日报你怎么写？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "真实记录每天产出和反思",                       "score": 0 },
+        { "key": "B", "label": "把 1 件事拆成 3 条写",                          "score": 3 },
+        { "key": "C", "label": "AI 一键生成，再配点 emoji",                     "score": 5 }
+      ]
+    },
+    {
+      "seq": 9,
+      "content": "领导夸你「效率高」，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "发自内心开心，再接再厉",                       "score": 0 },
+        { "key": "B", "label": "表面谦虚，内心 OS「因为我摸了」",                "score": 3 },
+        { "key": "C", "label": "心想「他终于懂我摸鱼也能交付」",                "score": 5 }
+      ]
+    },
+    {
+      "seq": 10,
+      "content": "工作日通勤路上，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "提前打开工作 APP 预览今日任务",                 "score": 0 },
+        { "key": "B", "label": "刷短视频醒脑为主",                             "score": 3 },
+        { "key": "C", "label": "心里盘算今天摸鱼的几个黄金时段",               "score": 5 }
+      ]
+    },
+    {
+      "seq": 11,
+      "content": "去一趟洗手间，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "就上厕所，五分钟之内回工位",                   "score": 0 },
+        { "key": "B", "label": "顺便刷一会儿手机，十几分钟起步",               "score": 3 },
+        { "key": "C", "label": "隔间蹲半小时，看完整部短剧",                   "score": 5 }
+      ]
+    },
+    {
+      "seq": 12,
+      "content": "老板发「今晚加个班？」，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "立刻回「好的」",                                "score": 0 },
+        { "key": "B", "label": "秒回「家里有事」",                              "score": 3 },
+        { "key": "C", "label": "装睡装病装地铁信号差",                         "score": 5 }
+      ]
+    },
+    {
+      "seq": 13,
+      "content": "碰到不会的活儿，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "自己硬啃研究到底",                             "score": 0 },
+        { "key": "B", "label": "问同事求协助",                                 "score": 3 },
+        { "key": "C", "label": "丢给 AI，改两个字交差",                         "score": 5 }
+      ]
+    },
+    {
+      "seq": 14,
+      "content": "工位抽屉里都装了啥？",
+      "is_hidden": false,
+      "image_prompt": {
+        "prompt": "一位 MBTI 插画风的打工人拉开工位大抽屉里面装满零食、毛毯、靠枕、电视棒、按摩仪、迷你加湿器，头顶飘字「第二个家」，MBTI 人格插画风，chibi Q 版 2.5 头身，圆润线条，薄荷绿纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "options": [
+        { "key": "A", "label": "只有必要文具",                                 "score": 0 },
+        { "key": "B", "label": "零食+护肤品+小垫子",                            "score": 3 },
+        { "key": "C", "label": "靠枕+毛毯+电视棒+按摩仪全套",                   "score": 5 }
+      ]
+    },
+    {
+      "seq": 15,
+      "content": "项目交付前一天，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "连夜打磨细节",                                 "score": 0 },
+        { "key": "B", "label": "凑合能跑就交，先下班",                         "score": 3 },
+        { "key": "C", "label": "AI 帮写，自己提前下班约饭",                     "score": 5 }
+      ]
+    },
+    {
+      "seq": 16,
+      "content": "同事出差他的活临时丢给你，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "当作自己的事一样认真干",                       "score": 0 },
+        { "key": "B", "label": "做完最低要求，不额外操心",                     "score": 3 },
+        { "key": "C", "label": "全部转给 AI，结果还比本人做的好",               "score": 5 }
+      ]
+    },
+    {
+      "seq": 17,
+      "content": "下班时间到了，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "还有事没做完，自愿加班",                       "score": 0 },
+        { "key": "B", "label": "合上电脑准时下班",                             "score": 3 },
+        { "key": "C", "label": "电脑提前 10 分钟关，座位留件外套就溜",          "score": 5 }
+      ]
+    },
+    {
+      "seq": 18,
+      "content": "终极拷问：你最常摸鱼的「风水宝地」是？",
+      "is_hidden": true,
+      "options": [
+        { "key": "A", "label": "工位（假装工作）",                             "score": 0 },
+        { "key": "B", "label": "茶水间 / 楼道转角",                             "score": 0 },
+        { "key": "C", "label": "厕所隔间（带着笔电写小说）",                   "score": 0 }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "code": "HUMAN_MACHINE",
+      "name": "人机之耻",
+      "summary": "别的牛马还在演，你是真的",
+      "detail": "你不是不摸鱼，你是不知道什么叫摸鱼。在你的认知里，工作就是工作，休息就是等下班。别人用 AI 一键生成周报，你还在一字一句琢磨动词；别人开会摄像头糊图，你认认真真做了两页笔记。你不是卷，是真·人机——连系统都找不到你的懒惰模块。你的问题不是工作太多，是你从来没想过要少。老板会感激你，但平台不会：你的血压替平台完成了 KPI。\n\n歪打正着的人生建议：别再假装自己不累，也别把加班当成品德。今天起试试下午 3 点起来接个水，多 5 分钟都算自我突破。",
+      "tags": ["人机之耻", "真卷王", "已被公司驯化"],
+      "is_fallback": false,
+      "is_special": false,
+      "avatar_prompt": {
+        "prompt": "一位 MBTI 人格形象的打工人正襟危坐工位双手飞速敲键盘眼神炯炯，头顶齿轮转动发光像被安装了程序，胸前挂牌「人机检测中」，桌上摆笔记本和清晨 7 点的咖啡，MBTI 插画风，chibi Q 版 2.5 头身，圆润线条，浅蓝纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "match_config": { "score_min": 0, "score_max": 17 }
+    },
+    {
+      "code": "BRONZE_FISH",
+      "name": "青铜摸鱼",
+      "summary": "你摸鱼像小偷，心跳比鱼还快",
+      "detail": "你属于想摸鱼但没胆的新手选手。每次刚想刷一下手机，余光都在扫老板的头；刚打开小红书，背后一个脚步声就吓得秒切 PDF。你不是不会摸鱼，你是摸得太紧张，摸完还不敢坦然休息。别人摸鱼是享受，你摸鱼是体能训练。同事看你一脸「绷得很紧」还以为你在写年终总结，其实你只是在犹豫要不要去洗手间刷 5 分钟。\n\n歪打正着的人生建议：摸鱼的精髓不是快，是稳。下次被撞见就坦然一点，你越慌老板越怀疑，你越淡定他反而觉得你在忙正事。",
+      "tags": ["青铜摸鱼", "心虚型选手", "紧绷的鱼"],
+      "is_fallback": false,
+      "is_special": false,
+      "avatar_prompt": {
+        "prompt": "一位 MBTI 插画风的青铜打工人背对电脑偷偷伸手摸手机眼神慌张往身后瞟头顶冒汗珠气泡「别过来别过来」，电脑屏保护模式闪烁，MBTI 人格插画风，chibi Q 版 2.5 头身，圆润线条，奶油黄纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "match_config": { "score_min": 18, "score_max": 35 }
+    },
+    {
+      "code": "STEADY_PLAYER",
+      "name": "稳摸中段",
+      "summary": "你摸得刚刚好，卷得也刚刚好",
+      "detail": "你深谙「摸而不烂、卷而不过」的中庸之道。摸鱼时候摸得踏实，干活时候干得明白，遇到紧急活儿也不会直接瘫，而是边吐槽边交付。你不是不会卷，你是懒得证明；你也不是不会躺，你是不想被抓。你的精神状态就是当代打工人的黄金分割点：既不会过劳死，也不会被优化。\n\n歪打正着的人生建议：保持这个节奏就好，但偶尔也可以跟领导汇报一下你的「辛苦」，毕竟默默摸的鱼，是没有奖状的。",
+      "tags": ["稳摸中段", "中庸大师", "反向绩效最优解"],
+      "is_fallback": true,
+      "is_special": false,
+      "avatar_prompt": {
+        "prompt": "一位 MBTI 人格形象的中段选手打工人一手敲键盘一手喝奶茶嘴角挂浅浅微笑，电脑屏左半写文档右半开小红书，头顶飘字「稳」，MBTI 插画风，chibi Q 版 2.5 头身，圆润线条，马卡龙粉纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "match_config": { "score_min": 36, "score_max": 52 }
+    },
+    {
+      "code": "KING_FISH",
+      "name": "王者摸鱼",
+      "summary": "摸鱼与工作浑然一体，绩效照常 A+",
+      "detail": "你是摸鱼界的王者，在公司待过三个月以上的人都听过你的传说。你不是「在摸鱼」，你是「把工作嵌进摸鱼的间隙」。别人 8 小时干活，你 1 小时干完剩下 7 小时「消化」；别人崩溃加班，你提前下班还能被表扬。你把 AI 用得出神入化，用快捷键拼贴出整份汇报，关键是老板还觉得你「效率惊人」。你不是反派，你是公司生产力的另一种诠释。\n\n歪打正着的人生建议：建议你出书，书名就叫《如何优雅地摸鱼到升职》，我先预定一本。",
+      "tags": ["王者摸鱼", "AI 外挂型选手", "老板宠儿"],
+      "is_fallback": false,
+      "is_special": false,
+      "avatar_prompt": {
+        "prompt": "一位 MBTI 插画风的王者打工人翘二郎腿坐工位手里同时刷手机和喝咖啡，电脑屏 AI 一键生成满屏文字，头顶小王冠胸前别「效率之星」徽章，MBTI 人格插画风，chibi Q 版 2.5 头身，圆润线条，薄荷绿纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "match_config": { "score_min": 53, "score_max": 69 }
+    },
+    {
+      "code": "GRAND_MASTER",
+      "name": "摸鱼宗师",
+      "summary": "全职摸鱼兼职上班，老板还说你专注",
+      "detail": "你已经超越了摸鱼的境界，抵达「人在工位，心在宇宙」的宗师级精神状态。你上班不是为了工作，是为了完成一种社会责任的表演；你的工位不是工位，是你个人生活的第二主场。抽屉里什么都有，除了工作文件；电脑里什么都开，除了工作文档。老板看你盯着屏幕，以为你在认真——其实你在云看剧。你不是摸鱼，你是鱼本身。\n\n歪打正着的人生建议：建议你把「敬业福」纹在脸上，反正领导也看不懂你到底在敬什么业。",
+      "tags": ["摸鱼宗师", "人形 AFK", "鱼本鱼"],
+      "is_fallback": false,
+      "is_special": false,
+      "avatar_prompt": {
+        "prompt": "一位 MBTI 人格形象的摸鱼宗师闭眼打坐漂浮在工位上方双手结印，身下工位散着奶茶小说按摩仪，头顶光环写着「鱼本身」，MBTI 插画风，chibi Q 版 2.5 头身，圆润线条，藕粉纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "match_config": { "score_min": 70, "score_max": 85 }
+    },
+    {
+      "code": "TOILET_WRITER",
+      "name": "厕所文学家",
+      "summary": "你的伟大作品都诞生于厕所隔间",
+      "detail": "恭喜，鉴定为都市传说级厕所文学家。别人摸鱼是划手机，你摸鱼是创作；别人的灵感在咖啡馆，你的灵感在公司三楼第三个隔间。你能在 30 分钟内写出一篇小说、构思一个副业、顺便还能把厕拉完。你不是逃避工作，你只是选择了一个空气比工位清新得多的创作空间。你的作品没有署名，但同事都认得你那双颤巍巍的脚。\n\n歪打正着的人生建议：建议你直接把笔记本搬进去，反正主场已经不在工位了。",
+      "tags": ["厕所文学家", "隔间创作者", "人生赢家.exe"],
+      "is_fallback": false,
+      "is_special": true,
+      "avatar_prompt": {
+        "prompt": "一位 MBTI 插画风的厕所文学家坐在隔间马桶盖上膝盖搭笔记本手指飞舞打字眼冒星星头顶光圈「灵感爆棚」，隔间门外牌子「使用中」，MBTI 人格插画风，chibi Q 版 2.5 头身，圆润线条，浅紫纯色大色块背景，细黑描边，治愈系卡通",
+        "style": "meme"
+      },
+      "match_config": {}
+    }
+  ]
+}

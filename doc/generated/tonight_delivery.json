@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "name": "今晚该点什么外卖",
+    "code": "tonight_delivery",
+    "cover_url": "",
+    "quiz_type": "branch",
+    "share_title": "帮你决定今晚点什么外卖",
+    "share_desc": "5道选择题，科学终结你的选择困难症",
+    "fallback_outcome_code": "COMFORT",
+    "result_config": {
+      "bg_color": "#fffbf0",
+      "show_radar": false,
+      "show_tags": true
+    }
+  },
+  "algo_config": {},
+  "special_rules": [],
+  "questions": [
+    {
+      "seq": 1,
+      "content": "今晚吃饭的预算大概是多少？",
+      "is_hidden": false,
+      "branch_config": { "default_next_seq": 2 },
+      "options": [
+        { "key": "A", "label": "25块以内，今天已经够穷了", "next_question_seq": 2 },
+        { "key": "B", "label": "25到50块，正常水平", "next_question_seq": 3 },
+        { "key": "C", "label": "不在乎，今天犒劳一下自己", "next_question_seq": 4 }
+      ]
+    },
+    {
+      "seq": 2,
+      "content": "穷归穷，但你今晚还有口味要求吗？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "没了，能吃饱就好，随机给我一个", "next_question_seq": -1, "outcome_code": "BUDGET_MEAL" },
+        { "key": "B", "label": "穷归穷，我不要辣的，要有点安慰感", "next_question_seq": -1, "outcome_code": "NOODLE" }
+      ]
+    },
+    {
+      "seq": 3,
+      "content": "今晚想不想吃辣？",
+      "is_hidden": false,
+      "branch_config": { "default_next_seq": 5 },
+      "options": [
+        { "key": "A", "label": "不想，来点清淡有安慰感的", "next_question_seq": -1, "outcome_code": "COMFORT" },
+        { "key": "B", "label": "想，越辣越解压", "next_question_seq": -1, "outcome_code": "MALATANG" },
+        { "key": "C", "label": "随便，帮我推荐一个", "next_question_seq": 5 }
+      ]
+    },
+    {
+      "seq": 4,
+      "content": "今晚是一个人吃，还是有朋友一起？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "一个人，享受独食自由，不用顾虑别人", "next_question_seq": -1, "outcome_code": "SUSHI" },
+        { "key": "B", "label": "有朋友一起，要热闹", "next_question_seq": -1, "outcome_code": "HOTPOT" }
+      ]
+    },
+    {
+      "seq": 5,
+      "content": "今天下班之后你的真实状态是？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "很累，脑子空了，想吃最省心最安慰的", "next_question_seq": -1, "outcome_code": "COMFORT" },
+        { "key": "B", "label": "还行，想吃点有点刺激感的，提个神", "next_question_seq": -1, "outcome_code": "MALATANG" }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "code": "BUDGET_MEAL",
+      "name": "便当 / 黄焖鸡米饭",
+      "avatar_url": "",
+      "summary": "今晚的选择非常务实，也非常诚实",
+      "detail": "点一份便当或黄焖鸡米饭，23块钱，解决饥饿问题，关闭外卖APP，继续过日子。这没什么丢人的，生活本来就是这样——有时候是大餐，有时候是便当，而且你知道吗，黄焖鸡米饭某种程度上是外卖界的尊严：便宜、管饱、不难吃。\n钱要留着，今天省了，明天可以多吃一顿好的。今晚好好吃，明天继续。",
+      "tags": ["务实之选", "管饱优先", "今天省钱"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": {}
+    },
+    {
+      "code": "NOODLE",
+      "name": "面条 / 粉",
+      "avatar_url": "",
+      "summary": "今晚吃面，热乎、舒服、不折腾，这是人类对自己最古老的照顾方式",
+      "detail": "清汤面、拌面、重庆小面、过桥米线，随你，但核心是：热乎、舒服、不折腾。吃面是一种非常古老的自我照顾方式，在各种文化里，痛苦的时候、疲惫的时候，人类都会选择吃一碗面。\n你今晚不需要惊喜，只需要一碗把你喂饱的面。嗦完面，关灯睡觉，明天会好的。\n如果可以，加一个荷包蛋。",
+      "tags": ["面食安慰系", "清淡救场", "今晚不折腾"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": {}
+    },
+    {
+      "code": "COMFORT",
+      "name": "家常菜外卖",
+      "avatar_url": "",
+      "summary": "你的身体今天发出了一个「我要回家」的信号，家常菜是最可接受的替代品",
+      "detail": "红烧肉、炒青菜、米饭，或者随便一个带汤的家常组合。你的身体在今天某个时候发出了一个信号：「我要回家」，而家常菜是这种信号最可接受的替代品。\n点好，等着，打开一集你之前没看完的剧，把这顿饭当成一个小小的仪式。今晚，好好吃这一顿，不用思考别的事。\n这顿饭结束之后，今天也结束了，明天是新的一天。",
+      "tags": ["家常安慰系", "妈妈菜平替", "今天就这样了"],
+      "is_fallback": true,
+      "is_special": false,
+      "match_config": {}
+    },
+    {
+      "code": "MALATANG",
+      "name": "麻辣烫",
+      "avatar_url": "",
+      "summary": "今晚的主题是：我要出一口气，麻辣烫帮你消化今天剩下的情绪",
+      "detail": "麻辣烫是一种非常有治愈感的食物，因为你可以把今天所有让你憋屈的事都投射到「要几分辣」这个选项上。你选了辣，说明今天的事还没消化完，但没关系，麻辣烫会帮你消化的。\n点单备注：「辣度给我拉满，谢谢」。加上你最喜欢的几样食材，一个人也好，有人陪也好，吃完你会好一点的。\n好消息是：辣出汗之后情绪真的会好一点，这是有科学依据的。",
+      "tags": ["解压首选", "辣度随心情", "吃完会好很多"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": {}
+    },
+    {
+      "code": "SUSHI",
+      "name": "日料 / 一人食",
+      "avatar_url": "",
+      "summary": "今晚你选择对自己好一点，一个人也可以好好吃一顿贵的",
+      "detail": "一个人去吃日料或者点一人食套餐，没有需要照顾别人口味，没有需要聊天，没有需要AA，只有你和你的食物。这是一种极度私密的享受，很多人做不到「一个人好好吃一顿贵的」，因为觉得「不值得」。\n但你值得。今天你值得被好好对待，哪怕这个「好好对待」是你自己给自己的。\n今晚的钱花得值，因为你今天值得。",
+      "tags": ["一人食高端局", "犒劳自己", "今天只管自己"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": {}
+    },
+    {
+      "code": "HOTPOT",
+      "name": "火锅外卖",
+      "avatar_url": "",
+      "summary": "今晚有朋友，那就火锅，热气到了，人在了，就够了",
+      "detail": "火锅这件事有一种神奇的民主感——每个人夹自己想吃的，锅里永远有热气，话可以说也可以不说，但就是感觉「在一起」。火锅外卖当然不如堂食，但热气到了，人在了，就够了。\n今晚好好吃，不要看手机，多聊两句，这顿饭的价值不在于食物，在于「你们今晚在同一张桌子前」——这件事以后会变成你们都记得的一个普通但温暖的晚上。\n锅底选好，备料充足，出发。",
+      "tags": ["朋友局首选", "热气腾腾", "今晚要有人陪"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": {}
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "name": "你是哪种吃货",
+    "code": "foodie_type",
+    "cover_url": "",
+    "quiz_type": "vector",
+    "share_title": "测测你是哪种吃货？",
+    "share_desc": "18道题，揭开你的真实饮食人格",
+    "fallback_outcome_code": "BALANCED_FOODIE",
+    "result_config": {
+      "bg_color": "#fff8f0",
+      "show_radar": true,
+      "show_tags": true
+    }
+  },
+  "algo_config": {
+    "similarity_threshold": 60,
+    "dimensions": [
+      { "code": "TW", "name": "口味浓淡", "group_code": "TW", "group_name": "口味偏好", "sort_order": 1 },
+      { "code": "EX", "name": "探索保守", "group_code": "EX", "group_name": "饮食探索欲", "sort_order": 2 },
+      { "code": "SC", "name": "独食群食", "group_code": "SC", "group_name": "饮食社交性", "sort_order": 3 }
+    ]
+  },
+  "special_rules": [],
+  "questions": [
+    {
+      "seq": 1,
+      "content": "吃饭你对「辣」的态度是？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "能不辣就不辣，辣了第二天难受", "dim_scores": { "TW": 1 } },
+        { "key": "B", "label": "微辣可以接受，重辣就算了", "dim_scores": { "TW": 2 } },
+        { "key": "C", "label": "不够辣等于没吃，加辣加辣加辣", "dim_scores": { "TW": 3 } }
+      ]
+    },
+    {
+      "seq": 2,
+      "content": "点外卖你偏向哪种口味？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "清淡、原味、食材新鲜，少油少盐", "dim_scores": { "TW": 1 } },
+        { "key": "B", "label": "适中，不太偏向任何一边", "dim_scores": { "TW": 2 } },
+        { "key": "C", "label": "够咸够辣够浓郁，有味道才叫吃饭", "dim_scores": { "TW": 3 } }
+      ]
+    },
+    {
+      "seq": 3,
+      "content": "火锅锅底你选什么？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "清汤，最好，健康又喝得到底", "dim_scores": { "TW": 1 } },
+        { "key": "B", "label": "鸳鸯，左边清汤右边红汤，两全其美", "dim_scores": { "TW": 2 } },
+        { "key": "C", "label": "全红汤变态辣，清汤是什么，那叫煮水", "dim_scores": { "TW": 3 } }
+      ]
+    },
+    {
+      "seq": 4,
+      "content": "你点外卖会不会备注「少盐少油」？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "经常备注，口味比较清淡", "dim_scores": { "TW": 1 } },
+        { "key": "B", "label": "偶尔，看具体情况", "dim_scores": { "TW": 2 } },
+        { "key": "C", "label": "从没备注过，越多越好，多加辣才对", "dim_scores": { "TW": 3 } }
+      ]
+    },
+    {
+      "seq": 5,
+      "content": "对重口小吃（螺蛳粉、臭豆腐、毛血旺），你的态度是？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "不太吃，气味和口感都接受不了", "dim_scores": { "TW": 1 } },
+        { "key": "B", "label": "偶尔吃，看心情", "dim_scores": { "TW": 2 } },
+        { "key": "C", "label": "就是要重口才过瘾，隔三差五必须来一顿", "dim_scores": { "TW": 3 } }
+      ]
+    },
+    {
+      "seq": 6,
+      "content": "别人吃得很辣，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "看着都觉得难受，不理解为什么要受这个罪", "dim_scores": { "TW": 1 } },
+        { "key": "B", "label": "无所谓，大家吃自己的", "dim_scores": { "TW": 2 } },
+        { "key": "C", "label": "「给我也来一份」，不辣不香", "dim_scores": { "TW": 3 } }
+      ]
+    },
+    {
+      "seq": 7,
+      "content": "看到没吃过的新餐厅，你会？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "先看评价，保守选择，踩雷太难受了", "dim_scores": { "EX": 1 } },
+        { "key": "B", "label": "查一下，评价不差就试试", "dim_scores": { "EX": 2 } },
+        { "key": "C", "label": "直接进去，吃了再说，踩雷也是经历", "dim_scores": { "EX": 3 } }
+      ]
+    },
+    {
+      "seq": 8,
+      "content": "朋友推荐一道很奇怪的食物，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "婉拒，不冒险，奇怪的东西不知道对身体好不好", "dim_scores": { "EX": 1 } },
+        { "key": "B", "label": "犹豫一下，如果朋友说好吃就少吃一口", "dim_scores": { "EX": 2 } },
+        { "key": "C", "label": "「有什么不敢的」，直接吃，好奇才是第一生产力", "dim_scores": { "EX": 3 } }
+      ]
+    },
+    {
+      "seq": 9,
+      "content": "你的外卖点单习惯是？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "就那几家，熟悉的最安全，不踩雷", "dim_scores": { "EX": 1 } },
+        { "key": "B", "label": "偶尔换换，但基本有固定几个选择", "dim_scores": { "EX": 2 } },
+        { "key": "C", "label": "每次都在找没点过的新店，老店没意思", "dim_scores": { "EX": 3 } }
+      ]
+    },
+    {
+      "seq": 10,
+      "content": "你愿意为「特别的饮食体验」花多少？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "不太愿意为了尝鲜花很多，好不好吃又不确定", "dim_scores": { "EX": 1 } },
+        { "key": "B", "label": "偶尔为特别的值得花多一点", "dim_scores": { "EX": 2 } },
+        { "key": "C", "label": "为了吃一顿值得的东西，机票都能订", "dim_scores": { "EX": 3 } }
+      ]
+    },
+    {
+      "seq": 11,
+      "content": "你对「网红食物」的态度是？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "不感兴趣，跟风的东西不一定好吃", "dim_scores": { "EX": 1 } },
+        { "key": "B", "label": "看情况，有机会顺便就试一下", "dim_scores": { "EX": 2 } },
+        { "key": "C", "label": "每次都要第一批吃到，不然有什么意思", "dim_scores": { "EX": 3 } }
+      ]
+    },
+    {
+      "seq": 12,
+      "content": "你有没有主动去学做某种特别的料理？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "没有，能吃到就行，自己做太麻烦了", "dim_scores": { "EX": 1 } },
+        { "key": "B", "label": "学过几道简单家常菜", "dim_scores": { "EX": 2 } },
+        { "key": "C", "label": "为了吃到某种东西自学成才，还挺成功", "dim_scores": { "EX": 3 } }
+      ]
+    },
+    {
+      "seq": 13,
+      "content": "你更喜欢哪种吃饭方式？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "一个人，自由自在，不需要照顾别人口味", "dim_scores": { "SC": 1 } },
+        { "key": "B", "label": "两三个人小聚，刚刚好", "dim_scores": { "SC": 2 } },
+        { "key": "C", "label": "一大桌人，越热闹越好，冷场太难受了", "dim_scores": { "SC": 3 } }
+      ]
+    },
+    {
+      "seq": 14,
+      "content": "吃饭你会想着拍照分享吗？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "不会，吃了就吃了，不需要记录", "dim_scores": { "SC": 1 } },
+        { "key": "B", "label": "偶尔拍，遇到特别好看的才发", "dim_scores": { "SC": 2 } },
+        { "key": "C", "label": "每次都记录，这是美食日记，不拍感觉白吃了", "dim_scores": { "SC": 3 } }
+      ]
+    },
+    {
+      "seq": 15,
+      "content": "你有没有专门的「饭搭子」？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "没有，一个人吃更自在，不用等人", "dim_scores": { "SC": 1 } },
+        { "key": "B", "label": "有几个固定的，偶尔会约", "dim_scores": { "SC": 2 } },
+        { "key": "C", "label": "认识我的人都能成为我的饭搭子，吃饭约人从不怯场", "dim_scores": { "SC": 3 } }
+      ]
+    },
+    {
+      "seq": 16,
+      "content": "聚餐你通常是什么角色？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "被拉来的那个，通常是「随便」的那个人", "dim_scores": { "SC": 1 } },
+        { "key": "B", "label": "普通成员，参与但不组织", "dim_scores": { "SC": 2 } },
+        { "key": "C", "label": "组织者，拉群订位点菜结账一条龙", "dim_scores": { "SC": 3 } }
+      ]
+    },
+    {
+      "seq": 17,
+      "content": "你对「一个人去餐厅吃饭」的感受是？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "完全没问题，甚至有点喜欢，安静", "dim_scores": { "SC": 1 } },
+        { "key": "B", "label": "无所谓，有点孤独但能接受", "dim_scores": { "SC": 2 } },
+        { "key": "C", "label": "能不一个人就不一个人，一个人吃饭太没氛围", "dim_scores": { "SC": 3 } }
+      ]
+    },
+    {
+      "seq": 18,
+      "content": "朋友晒了一张美食照片，你？",
+      "is_hidden": false,
+      "options": [
+        { "key": "A", "label": "觉得好看，点个赞，继续刷", "dim_scores": { "SC": 1 } },
+        { "key": "B", "label": "回复「在哪吃的」，备用信息", "dim_scores": { "SC": 2 } },
+        { "key": "C", "label": "立刻拉群「我们也去！」，说干就干", "dim_scores": { "SC": 3 } }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "code": "SOLO_LIGHT",
+      "name": "清淡独食者",
+      "avatar_url": "",
+      "summary": "你每天安静地打完饭找个角落坐下，内心无比满足",
+      "detail": "你对饮食的核心需求是「简单、干净、不乱」，不喜欢重口，不爱尝新，不想和太多人分享食物。你可能知道食堂哪个窗口的菜最清淡，哪家外卖少油，哪个时间点排队人最少。这不是孤僻，是你把吃饭当成了一件非常私密的事。\n你不是没有品位，你只是品位极为精准——要清淡的，要安静的，要属于自己的。\n建议你偶尔约一个最信任的人一起吃，单纯尝试一下「有人陪着吃」的感觉——不需要多，一个人就够，试试有没有不一样。",
+      "tags": ["清淡口味", "独食自在", "不爱踩雷"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "dim_vector": [1, 1, 1] }
+    },
+    {
+      "code": "SOCIAL_LIGHT",
+      "name": "清淡合群党",
+      "avatar_url": "",
+      "summary": "你吃的是清淡的，但你更需要有人陪着一起吃",
+      "detail": "你喜欢清淡的食物，但你更喜欢吃饭时有人陪。你不爱尝新，基本就在几家固定的餐厅转，但每次都要拉着至少一个人一起。你的「吃饭」很大程度上是「见面」的借口，食物是背景，人才是主角。\n你有一种能力：让任何一顿普通的饭吃出聚会感。这是真的社交天赋，只是被用在了外卖和食堂上。\n建议你偶尔一个人吃一顿，专心品尝食物本身——你可能会发现你比自己以为的更喜欢那家清淡小馆。",
+      "tags": ["清淡口味", "饭要有人陪", "固定几家转"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "dim_vector": [1, 1, 3] }
+    },
+    {
+      "code": "EXPLORER_LIGHT",
+      "name": "清淡探店独行侠",
+      "avatar_url": "",
+      "summary": "你有精准的味觉，一个人安静地找好吃的，不需要别人认证",
+      "detail": "你会一个人去试没人知道的小馆子，不需要朋友陪，不需要拍照发圈，吃完走人。你对食物质量要求很高，但同时偏爱清淡，所以你的探索目标通常比较小众——不是网红店，是那种「内行人才知道」的地方。\n这是一种极度自洽的吃法，也是很多人羡慕却做不到的自由。\n建议你把某一次特别好吃的体验记录下来，发给一个朋友，或者写下来。你的品味值得被分享，哪怕只是分享给一个人。",
+      "tags": ["清淡探索派", "独行美食家", "不拍照也不发圈"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "dim_vector": [1, 3, 1] }
+    },
+    {
+      "code": "BLOGGER_LIGHT",
+      "name": "清淡美食博主候选",
+      "avatar_url": "",
+      "summary": "你的朋友圈是一本城市清淡餐厅指南，有人爱有人不懂",
+      "detail": "你对探店充满热情，对清淡精致的食物有独特品味，同时极爱分享。你的朋友圈是一本「清淡餐厅指南」，有人因为你的推荐吃到了好东西，也有人因为你推荐的清淡餐厅感到失望——「这也叫好吃？」你是少数民族，但你们之间相认很快。\n你对饮食有一套自己的语言，但这套语言不是所有人都能读懂的，这偶尔会让你觉得有点孤独。\n建议你真的开个账号，哪怕只给50个人看。你的审美值得更多人看见，而那50个人，可能正在等一个像你一样挑剔的清淡美食推荐者。",
+      "tags": ["清淡探索派", "爱分享", "美食账号没开的候选人"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "dim_vector": [1, 3, 3] }
+    },
+    {
+      "code": "SOLO_HEAVY",
+      "name": "重口独食派",
+      "avatar_url": "",
+      "summary": "螺蛳粉不需要伴，一个人嗦才是最自由的",
+      "detail": "你有非常固定的重口偏好，而且坚决要自己一个人执行。你可能有一些「自己的秘密餐厅」，不告诉别人，每次一个人去嗦粉、吃卤味，因为这是属于你一个人的快乐，被打扰了就不好玩了。\n你对食物很忠诚，对「需要凑人头才能吃」这件事有轻微抵触。这不是不合群，是你清楚地知道这件事最适合一个人干。\n建议你至少有一次把你最喜欢的那家店推荐给一个人，因为好东西藏着有时候也挺孤独的。好不好吃是你判断，好不好玩是两个人的事。",
+      "tags": ["重口必须", "独食专属", "秘密餐厅清单"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "dim_vector": [3, 1, 1] }
+    },
+    {
+      "code": "FIRE_LORD",
+      "name": "火锅局发起人",
+      "avatar_url": "",
+      "summary": "只要你在，火锅这件事一定能落地，你是团队重口精神支柱",
+      "detail": "你热爱重口，热爱热闹，而且认为这两件事天生就应该在一起发生。你有一个专门用来拉饭局的技能——只要你在，火锅这件事一定能落地。你不需要什么新花样，老火锅、老朋友、加辣、加料就行。\n你的人生哲学是：能热闹就不要安静，能重口就不要将就。但你有一点点保守——你不太爱尝试奇怪的新东西，已知的重口已经让你很满足了。\n建议你有一次在家一个人安静地煮一锅小火锅，感受一下安静里的辣是什么味道。你会发现：原来辣也可以很温柔。",
+      "tags": ["重口爱好者", "饭局发起人", "老店老口味"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "dim_vector": [3, 1, 3] }
+    },
+    {
+      "code": "WEIRD_SOLO",
+      "name": "猎奇独食派",
+      "avatar_url": "",
+      "summary": "你有一张奇怪食物清单，一个人默默打卡，记录「值得」或「拉黑」",
+      "detail": "你既追求刺激口味，又热衷探索新食物，而且不需要任何人陪你完成这件事。你有一张「奇怪食物清单」，上面有各种正常人不太会主动去找的东西，你一个人默默打卡，默默吃完，然后在备忘录里记一句「值得」或者「拉黑」。\n你是自给自足的美食宇宙，别人进不来，你也不需要他们进来。\n建议你下次把「拉黑名单」发给一个朋友，他们的震惊表情会让你多感受一次吃这些东西的乐趣——原来有人分享，怪食物的冲击感可以翻倍。",
+      "tags": ["重口猎奇", "独行打卡", "食物黑名单收藏家"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "dim_vector": [3, 3, 1] }
+    },
+    {
+      "code": "FOODIE_KING",
+      "name": "吃播候选人",
+      "avatar_url": "",
+      "summary": "你什么都吃，越辣越好，越新鲜越想试，越多人越热闹",
+      "detail": "你是美食爱好者里段位最高的那种——不挑剔，不保守，不孤独。你的胃是一个没有边界的容器，你的朋友圈是一本「不正经饮食百科全书」。今天是变态辣串串，明天是没听说过的新式料理，后天是凌晨两点的路边摊。\n你离吃播只差一部手机和一颗愿意被评论区骂「吃太多了」的心。你在这件事上的热情，很多人努力一辈子都达不到。\n建议你认真考虑一下——浪费了有点可惜。不一定要做成生意，但至少给你的美食冒险留一个记录，这本来就是一部很好看的故事。",
+      "tags": ["无边界吃货", "重口探索社交全满", "吃播灵魂"],
+      "is_fallback": false,
+      "is_special": false,
+      "match_config": { "dim_vector": [3, 3, 3] }
+    },
+    {
+      "code": "BALANCED_FOODIE",
+      "name": "全能普通吃货",
+      "avatar_url": "",
+      "summary": "你有时清淡有时重口，有时独食有时约饭，任何场合都能找到自己的饮食节奏",
+      "detail": "你是吃货里最难定义的那种——有时清淡有时重口，有时独食有时约饭，有时守旧有时探店。你不是没有个性，你是「全地形通用型」，任何场合都能找到自己的饮食体验，任何人都可以和你一起吃饭而不觉得迁就。\n这是优点。但偶尔你会在点单时陷入选择困难——因为你其实什么都可以，反而不知道「最想要什么」。\n建议你下次点单时，5秒之内做决定，跟着第一直觉走。那个第一直觉，才是你真正的口味在说话，别让理性把它覆盖掉了。",
+      "tags": ["全地形通用", "选择困难偶发", "最好合作的饭搭子"],
+      "is_fallback": true,
+      "is_special": false,
+      "match_config": { "dim_vector": [2, 2, 2] }
+    }
+  ]
+}

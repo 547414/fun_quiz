@@ -1,0 +1,9 @@
+from [MODULE_NAME].repository.[TABLE_NAME_LOWER]_repository import [TABLE_NAME]Repository
+
+
+class [TABLE_NAME]Service:
+    def __init__(
+            self,
+            [TABLE_NAME_LOWER]_repository: [TABLE_NAME]Repository,
+    ):
+        self.__[TABLE_NAME_LOWER]_repository = [TABLE_NAME_LOWER]_repository
