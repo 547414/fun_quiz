@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SERVER="user@ip"
+REMOTE_BASE="/home/ubuntu/projects/fun_quiz"
+
+# 删除远程 dist 目录
+ssh $SERVER "rm -rf $REMOTE_BASE/mobile/dist $REMOTE_BASE/web/dist"
+
+# 上传
+scp -r xxx/fun_quiz/mobile/dist $SERVER:$REMOTE_BASE/mobile/
+scp -r xxx/fun_quiz/web/dist $SERVER:$REMOTE_BASE/web/

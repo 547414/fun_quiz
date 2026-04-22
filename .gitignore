@@ -11,3 +11,4 @@
 **/app_development_config.toml
 **/app_production_config.toml
 **/dist/
+**/deploy_frontend.sh
