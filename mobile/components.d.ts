@@ -7,15 +7,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AreaSelect: typeof import('./src/components/area/AreaSelect.vue')['default']
-    AreaSelectAsync: typeof import('./src/components/area/AreaSelectAsync.vue')['default']
-    BarSimple: typeof import('./src/components/echartsCom/BarSimple.vue')['default']
-    DateSelect: typeof import('./src/components/date/DateSelect.vue')['default']
     ImagePreview: typeof import('./src/components/file/ImagePreview.vue')['default']
     Loading: typeof import('./src/components/Loading.vue')['default']
-    ModelSelector: typeof import('./src/components/select/ModelSelector.vue')['default']
-    PieBorderRadius: typeof import('./src/components/echartsCom/PieBorderRadius.vue')['default']
-    RoleFilter: typeof import('./src/components/role/roleFilter.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     VanButton: typeof import('vant/es')['Button']
@@ -30,6 +23,5 @@ declare module 'vue' {
     VanPopup: typeof import('vant/es')['Popup']
     VanProgress: typeof import('vant/es')['Progress']
     VanSearch: typeof import('vant/es')['Search']
-    WecomUserSelect: typeof import('./src/components/wecomUser/wecomUserSelect.vue')['default']
   }
 }
