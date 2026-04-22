@@ -1,0 +1,21 @@
+---
+description: Neon database access conventions for Next.js fullstack project.
+globs: next/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Neon Data Access Rules
+
+- Neon 访问只在服务端执行，禁止在客户端组件直接连接数据库。
+- 查询入口统一收敛到 `db`/`repository` 层，避免页面或组件直写查询。
+- 每个查询函数只做一类数据操作，读写分离，避免“超大方法”。
+- 参数与返回类型显式声明，禁止 `any` 透传到数据库边界。
+- 错误处理必须保留上下文（操作、关键参数、影响范围），禁止吞异常。
+
+## Transaction And Consistency
+
+- 当前项目使用 `drizzle-orm/neon-http`，禁止使用 `db.transaction(...)`（会触发 `No transactions support in neon-http driver`）。
+- 多步写操作使用“先子后主”的顺序化写入，并通过幂等键/条件更新（如状态条件、唯一键）保证一致性。
+- 对需要原子性的关键流程，优先使用单条 SQL 条件更新 + 返回值校验，避免依赖事务能力。
+- 变更前先校验业务前置条件，失败时快速返回并给出可定位错误信息。
+- 数据库字段命名与 TypeScript 模型命名保持可映射、可追踪。

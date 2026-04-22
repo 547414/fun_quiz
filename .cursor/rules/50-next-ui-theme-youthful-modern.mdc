@@ -1,0 +1,53 @@
+---
+description: Next frontend UI theme style: rounded, modern, youthful, colorful.
+globs: next/src/**/*.{tsx,jsx,css,scss}
+alwaysApply: false
+---
+
+# Next UI Theme: Rounded Modern Youthful
+
+- 作用范围：仅 `next/src` 前端页面与组件（不约束 `src/server` 和 API 路由）。
+- 约束强度：中约束。默认遵守，遇到业务可用性或可访问性冲突时可合理例外。
+
+## Visual Style Baseline
+
+- 圆角优先：卡片/弹层/输入框/按钮统一使用柔和圆角，优先 `rounded-xl` 到 `rounded-2xl`。
+- 现代层次：使用阴影 + 留白营造层次，不用厚重边框和拟物风。
+- 青春感：支持活力配色与渐变点缀，但避免整页高饱和“满屏撞色”。
+- 多彩但有秩序：一个主色 + 1-2 个辅助色；语义色（成功/警告/错误）保持稳定。
+
+## Elevation and Shadow Rules
+
+- 立体感优先通过阴影实现：弱化硬边框，避免“平铺一层”的单调视觉。
+- 阴影分级要一致（优先用项目 token）：
+  - 基础容器：`elevation-surface` 或 `shadow-[var(--shadow-surface)]`
+  - 重点卡片/悬浮元素：`elevation-raised` 或 `shadow-[var(--shadow-raised)]`
+  - 弹窗/抽屉：`elevation-overlay` 或 `shadow-[var(--shadow-overlay)]`
+- 交互反馈要有阴影变化：hover/active 至少提升或回落 1 个阴影层级。
+- 阴影要柔和：优先低透明度、大模糊半径，不用生硬黑块阴影。
+- 禁止阴影滥用：同一区域最多 1-2 个强立体焦点，避免“每个组件都很重”。
+
+## Component Rules
+
+- 按钮：主按钮可用渐变或高亮纯色，hover/active 要有明确反馈。
+- 卡片：背景干净，信息分组清晰，默认带轻阴影，重点内容可提升一级阴影。
+- 表单：输入框圆角统一，focus 态明显，错误态颜色和文案可快速识别。
+- 标签/徽标：用低饱和底色 + 高对比文字，避免荧光色块。
+
+## UX and Accessibility
+
+- 可读性优先：正文和关键操作文本对比度必须足够，不为“彩色风格”牺牲可读性。
+- 动效轻量：以 `transition` 微动效为主，避免夸张和干扰性动画。
+- 一致性：同类组件的圆角、间距、字号、状态反馈保持一致。
+- 新页面完成后按 `next/docs/UI_STYLE_A11Y_CHECKLIST.md` 逐项自检。
+
+## Quick Examples
+
+```tsx
+// ✅ GOOD: 有层次感，阴影随交互变化
+<button className="rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 py-2 text-white shadow-sm hover:shadow-md active:shadow transition" />
+
+// ❌ BAD: 风格陈旧、视觉噪音大
+<button className="rounded-none border-2 border-black bg-yellow-300 text-red-600" />
+```
+

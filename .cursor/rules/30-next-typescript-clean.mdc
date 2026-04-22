@@ -1,0 +1,21 @@
+---
+description: Next.js TypeScript clean code defaults for the new frontend.
+globs: next/**/*.{ts,tsx,js,jsx}
+alwaysApply: false
+---
+
+# Next TypeScript Rules
+
+- 优先使用 TypeScript 显式类型，避免 `any` 扩散。
+- 组件保持小而纯；复杂页面拆分为容器、展示组件、hooks。
+- 服务端与客户端逻辑分离，避免在 UI 层混入业务和数据编排细节。
+- 副作用集中在 hooks 或 actions，减少组件内隐式状态流。
+- 错误与空态必须显式处理，不依赖静默失败。
+- 样式优先使用 Tailwind 工具类；重复样式抽取为可复用片段。
+
+## Clean Code Reinforcement
+
+- 命名表达意图：`fetchQuizList` 优于 `getData`。
+- 函数优先早返回，减少嵌套和分支复杂度。
+- 复用优先：共用类型、常量、工具函数集中维护。
+- 页面级逻辑按 `loading/error/success` 三态组织，避免分支散落。

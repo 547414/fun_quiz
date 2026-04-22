@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f7ff;
+  --foreground: #171a29;
+  --surface: #ffffff;
+  --surface-muted: #f3f5ff;
+  --border: #dce3ff;
+  --ring: #7c3aed;
+  --primary: #7c3aed;
+  --primary-foreground: #fdfbff;
+  --secondary: #06b6d4;
+  --secondary-foreground: #05343e;
+  --danger: #ef4444;
+  --danger-foreground: #fff7f7;
+  --success: #10b981;
+  --success-foreground: #f2fffb;
+  --warning: #f59e0b;
+  --warning-foreground: #3b2602;
+  --info: #3b82f6;
+  --info-foreground: #f4f8ff;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --shadow-surface: 0 10px 24px -18px rgba(79, 70, 229, 0.32);
+  --shadow-raised: 0 16px 34px -18px rgba(76, 62, 211, 0.42);
+  --shadow-overlay: 0 26px 52px -24px rgba(33, 25, 91, 0.52);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f1120;
+    --foreground: #f4f5ff;
+    --surface: #171a30;
+    --surface-muted: #1d2140;
+    --border: #2d335b;
+    --ring: #a78bfa;
+    --primary: #8b5cf6;
+    --primary-foreground: #f4f0ff;
+    --secondary: #22d3ee;
+    --secondary-foreground: #032f39;
+    --danger: #f87171;
+    --danger-foreground: #fff1f1;
+    --success: #34d399;
+    --success-foreground: #ecfff8;
+    --warning: #fbbf24;
+    --warning-foreground: #3d2a03;
+    --info: #60a5fa;
+    --info-foreground: #f1f7ff;
+    --shadow-surface: 0 14px 26px -18px rgba(39, 34, 98, 0.72);
+    --shadow-raised: 0 20px 38px -22px rgba(24, 19, 67, 0.78);
+    --shadow-overlay: 0 30px 54px -28px rgba(7, 6, 21, 0.84);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.pt-safe-top {
+  padding-top: max(env(safe-area-inset-top), 0px);
+}
+
+.pb-safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 0px);
+}
+
+.elevation-surface {
+  box-shadow: var(--shadow-surface);
+}
+
+.elevation-raised {
+  box-shadow: var(--shadow-raised);
+}
+
+.elevation-overlay {
+  box-shadow: var(--shadow-overlay);
+}

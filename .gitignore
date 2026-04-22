@@ -12,3 +12,4 @@
 **/app_production_config.toml
 **/dist/
 /python
+.env

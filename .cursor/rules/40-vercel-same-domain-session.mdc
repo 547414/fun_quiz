@@ -1,0 +1,13 @@
+---
+description: Vercel same-domain deployment auth/session constraints.
+alwaysApply: true
+---
+
+# Vercel Same-Domain Session Rules
+
+- 本项目默认通过 Vercel 同域部署：管理端/H5/API 共用同一主域名。
+- 不允许假设前后端分域；禁止依赖子域名做会话隔离。
+- Cookie 必须按业务 `space` 隔离命名（如 `..._web`、`..._h5`），避免同域互相覆盖。
+- 请求层必须显式发送 `Scene`/`Space`，服务端鉴权按 `Scene`/`Space` 校验会话。
+- 新增登录、刷新、注销、切角色接口时，必须同步处理对应 `space` 的 cookie 读写。
+- 修改请求封装时，保持 401 -> refresh -> 重试 -> 跳转 `/login` 的统一流程。

@@ -1,0 +1,11 @@
+---
+description: Use yarn as the default package manager.
+alwaysApply: true
+---
+
+# Package Manager Policy
+
+- 本项目默认包管理器是 `yarn`。
+- 安装依赖优先使用 `yarn add` / `yarn add -D`，不使用 `npm install`。
+- 脚本执行优先使用 `yarn <script>`，不使用 `npm run <script>`。
+- 仅在用户明确要求时才切换到 `npm`、`pnpm` 或 `bun`。

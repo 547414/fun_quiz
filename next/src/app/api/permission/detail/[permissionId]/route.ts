@@ -1,0 +1,19 @@
+import { eq } from "drizzle-orm";
+
+import { db } from "@/db";
+import { permissions } from "@/db/schema/core";
+import { requireAuth } from "@/lib/auth/guard";
+import { withApi } from "@/lib/http";
+
+type Props = {
+  params: Promise<{ permissionId: string }>;
+};
+
+export async function GET(_: Request, props: Props) {
+  return withApi(async () => {
+    await requireAuth(["SUPER_ADMIN", "ADMIN"]);
+    const { permissionId } = await props.params;
+    const [row] = await db.select().from(permissions).where(eq(permissions.id, permissionId)).limit(1);
+    return row ?? null;
+  });
+}

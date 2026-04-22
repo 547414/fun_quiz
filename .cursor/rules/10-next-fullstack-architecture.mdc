@@ -1,0 +1,19 @@
+---
+description: Next.js fullstack architecture and clean module boundaries.
+globs: next/**/*.{ts,tsx,js,jsx}
+alwaysApply: false
+---
+
+# Next Fullstack Architecture
+
+- 按职责分层：`ui(components)`、`application(actions/use-cases)`、`infrastructure(db/external)`。
+- 页面与组件只负责展示和交互，不承载复杂业务编排。
+- 业务流程放在 server actions、route handlers 或 service 函数中统一管理。
+- 数据访问收敛到独立数据层，避免在多个页面中散落 SQL/查询逻辑。
+- 工具函数保持纯函数优先，副作用逻辑集中在服务边界。
+
+## Clean Code Reinforcement
+
+- 单个模块只暴露必要接口，避免“万能 util”。
+- 跨层调用必须通过清晰函数边界，不直接访问内部实现细节。
+- 函数名体现业务意图，禁止 `handleData`/`doSomething` 这类模糊命名。
