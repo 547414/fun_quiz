@@ -13,3 +13,12 @@
 **/dist/
 /python
 .env
+.env*
+!*.env.example
+.next/
+out/
+coverage/
+build/
+test-results/
+next-env.d.ts
+*.tsbuildinfo
